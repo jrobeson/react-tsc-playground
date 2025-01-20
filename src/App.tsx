@@ -1,8 +1,8 @@
-import Header from './components/Header';
+import Header from './components/Header.tsx';
 import goalsImg from './assets/goals.jpg';
 import { useState } from 'react';
-import CourseGoalList from './components/CourseGoalList';
-import NewGoal from './components/NewGoal';
+import CourseGoalList from './components/CourseGoalList.tsx';
+import NewGoal from './components/NewGoal.tsx';
 
 export type CourseGoal = {
 	title: string;
