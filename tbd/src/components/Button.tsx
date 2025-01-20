@@ -20,7 +20,7 @@
 // bc ts doesnt know which props we are deciding to pass in, just that it could be button or anchor
 ///sooo this allow us to put hrefs on buttons etc which we do not want
 
-import { ComponentPropsWithoutRef } from 'react';
+import { type ComponentPropsWithoutRef } from 'react';
 
 type ButtonProps = ComponentPropsWithoutRef<'button'> & {
 	href?: never;

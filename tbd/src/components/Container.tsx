@@ -1,4 +1,4 @@
-import { type ReactNode, type ElementType, ComponentPropsWithoutRef } from 'react';
+import { type ReactNode, type ElementType, type ComponentPropsWithoutRef } from 'react';
 
 type ContainerProps<T extends ElementType> = {
 	as?: T;

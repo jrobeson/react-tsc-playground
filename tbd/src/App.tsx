@@ -1,11 +1,24 @@
-import { useRef } from 'react';
 import Input from './components/Input';
+import Form, { type FormHandle } from './components/Form';
+import Button from './components/Button';
+import { useRef } from 'react';
 
 function App() {
-	const input = useRef<HTMLInputElement>(null);
+	const formref = useRef<FormHandle>(null);
+	function handleSave(data: unknown) {
+		const extractedData = data as { name: string; age: string };
+		console.log(extractedData);
+		formref.current?.clear();
+	}
 	return (
 		<main>
-			<Input label='test' id='test' ref={input} />
+			<Form onSave={handleSave} ref={formref}>
+				<Input label='Name' id='name' />
+				<Input label='Age' id='age' type='number' />
+				<p>
+					<Button>Save</Button>
+				</p>
+			</Form>
 		</main>
 	);
 }
